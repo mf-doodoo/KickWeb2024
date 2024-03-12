@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Joyce - Joy Division</title>
+    <link rel="stylesheet" href="testseite-v4.css">
+
+    <style>
+        
+
+        body {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            background-color: antiquewhite;
+        }
+
+        .title {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr; /* Two equal columns */
+            grid-gap: 0px; /* Gap between grid items */
+            align-items: last baseline;
+        }
+
+        h1-container {
+            font-size: 10vw;
+            /*border-style: solid;
+            border-width: 1px;*/
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            white-space: nowrap;
+            justify-content: center;
+            border-right: 50px;
+        }
+
+        h2-container {
+            font-size: 3vw;
+            /*border-style: solid;
+            border-width: 1px;*/
+            justify-content: end;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;   
+        }
+
+
+        .infos {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two equal columns */
+            grid-gap: 0px; /* Gap between grid items */
+            margin-top: 200px;
+            margin-bottom: 0px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <object type="image/svg+xml" data="joy division.svg"></object>
+
+    <div id="plakat">
+        <section class="title">
+            <div class="h1-container">
+                <h1>joy division</h1>
+            </div>
+            <div class="h2-container">
+                <h2>with special guest </br>killing joke & section 25</h2>
+            </div>
+        </section>
+        <section class="infos">
+            <p>friday</br>
+                february 29 1980 / 7:30
+            </p>
+            <p class="ort">
+                lyceum theatre</br>
+                westminster, london
+            </p>
+            <p>
+                presented by fresh music </br>
+                £2.50 tickets available at lyceum
+            </p>
+        </section>
+    </div>
+
+</body>
+</html>
