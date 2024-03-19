@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Grid: task 3</title>
+
+    <link rel="stylesheet" href="grid-uebung3.css" />
+
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font:
+          1.2em / 1.5 Helvetica Neue,
+          Helvetica,
+          Arial,
+          sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      .grid > * {
+        background-color: #4d7298;
+        border: 2px solid #77a6b6;
+        border-radius: 0.5em;
+        color: #fff;
+        padding: 0.5em;
+      }
+      
+      .one{
+        grid-area: One;
+      }
+
+      .two{
+        grid-area: Two;
+      }
+
+      .three{
+        grid-area: Three;
+      }
+
+      .four{
+        grid-area: Four;
+    }
+
+      .grid {
+        display: grid;
+        gap: 10px;
+        grid-template-areas: 
+        "One One One"
+        "Two Three Three"
+        ". Four Four";
+
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="grid">
+      <div class="one">One</div>
+      <div class="two">Two</div>
+      <div class="three">Three</div>
+      <div class="four">Four</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+/*-----Tags----*/
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');*/
+
+@font-face {
+    font-family: face;
+    src: url("jgs5.woff2");
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: "face";
+}
+
+h1{
+    border-style: dashed;
+    border-color: white;   
+    text-align: center;
+   }
+      
+p{
+    text-align: center;
+    font-family: "Anta", sans-serif;        
+}
+
+/*-----ID----*/
+#poetry{
+
+}
+
+/*-----Klassen----*/
+.first{
+
+}
+.second{
+
+}
+.third{
+
+}
