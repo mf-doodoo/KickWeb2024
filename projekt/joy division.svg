@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1015 1013">
   <defs>
     <style>
@@ -70,24 +69,30 @@
         fill: #753337;
       }
     </style>
-    <clipPath id="clippath">
+
+
+    <clipPath id="clippath"> <!--Rechteck Maske schräg-->
       <rect class="cls-7" x="31.1" y="32.62" width="946.75" height="946.82" transform="translate(-210.06 504.93) rotate(-45)"/>
-    </clipPath>
+    </clipPath> <!--Rechteck-->
     <clipPath id="clippath-1">
       <rect class="cls-7" width="1015" height="1013"/>
     </clipPath>
   </defs>
-  <g class="cls-16">
-    <rect class="cls-3" x="173" y="175" width="671" height="677"/>
-    <g class="cls-15">
+  <g class="cls-16"> <!--Rechteck Mitte schwarz-->
+    <rect class="cls-3" x="173" y="175" width="671" height="677"/> <!--Unterklassen-->
+    <g class="inner-rectangles"> <!--innere Rechtecke-->
       <rect class="cls-11" x="248" y="69" width="506" height="154"/>
       <rect class="cls-8" x="291" y="793" width="447" height="159"/>
       <rect class="cls-5" x="792" y="146" width="136" height="621"/>
       <rect class="cls-14" x="87" y="249" width="134" height="563"/>
+    </g>
+    <g class="middle-rectangles"> <!--mittlere Rechtecke-->
       <rect class="cls-1" x="383.7" y="176.51" width="858.43" height="157.73" transform="translate(418.68 -500.02) rotate(45)"/>
       <rect class="cls-10" x="-234.46" y="679.53" width="858.43" height="153.44" transform="translate(591.79 83.79) rotate(45)"/>
       <rect class="cls-12" x="-55.6" y="114.73" width="633.33" height="158.35" transform="translate(-60.64 241.4) rotate(-45)"/>
       <rect class="cls-13" x="697.63" y="378.85" width="153.91" height="841.46" transform="translate(792.26 -313.52) rotate(45)"/>
+    </g>
+    <g class="outer-rectangles"> <!--äussere Rechtecke-->
       <rect class="cls-2" x="903" y="224" width="112" height="565"/>
       <rect class="cls-4" x="-3" y="208" width="114" height="604"/>
       <rect class="cls-9" x="204" width="588" height="111"/>
