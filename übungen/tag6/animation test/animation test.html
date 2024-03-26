@@ -8,11 +8,53 @@
 
     <style>
       .inner-rectangles {
-        translate-origin;
-        animation: innenRechts 2s infinite;
+        transform-origin: 50% 50%;
+        animation: innenaussenRechts 5s infinite;
+        animation-direction: alternate-reverse
       }
 
-      @keyframes innenRechts {
+      .middle-rectangles {
+        transform-origin: 50% 50%;
+        animation: mitteLinks 5s infinite;
+        animation-direction: alternate-reverse;
+      }
+
+      .outer-rectangles {
+        transform-origin: 50% 50%;
+        animation: innenaussenRechts 5s infinite;
+        animation-direction: alternate-reverse
+      }
+
+      .cls-7{
+        transform: rotate(45deg);
+        transform-origin: 50% 50%;
+        /*transform-origin: 50% 50%;
+        animation: maskeAnimation 5s infinite;
+        animation-direction: alternate-reverse*/
+
+      }
+
+      @keyframes innenaussenRechts {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes mitteLinks {
+            0% {
+                transform: rotate(45deg);
+            }
+
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+
+        @keyframes maskeAnimation {
             0% {
                 transform: rotate(0deg);
             }
@@ -25,36 +67,37 @@
 
 </head>
 <body>
-    <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1015 1013">
-        <defs> 
-          <clipPath id="clippath"> <!--Rechteck Maske schräg-->
-            <rect class="cls-7" x="31.1" y="32.62" width="946.75" height="946.82" transform="translate(-210.06 504.93) rotate(-45)"/>
-          </clipPath> <!--Rechteck Arbeitsfläche-->
-          <clipPath id="clippath-1">
-            <rect class="cls-7" width="1015" height="1013"/> <!--Rechteck Elemente-->
-          </clipPath>
-        </defs>
-        <g class="cls-16"> <!--Rechteck Mitte schwarz-->
-          <rect class="cls-3" x="173" y="175" width="671" height="677"/> <!--Unterklassen-->
-          <g class="inner-rectangles"> <!--innere Rechtecke-->
-            <rect class="cls-11" x="248" y="69" width="506" height="154"/>
-            <rect class="cls-8" x="291" y="793" width="447" height="159"/>
-            <rect class="cls-5" x="792" y="146" width="136" height="621"/>
-            <rect class="cls-14" x="87" y="249" width="134" height="563"/>
-          </g>
-          <g class="middle-rectangles"> <!--mittlere Rechtecke-->
-            <rect class="cls-1" x="383.7" y="176.51" width="858.43" height="157.73" transform="translate(418.68 -500.02) rotate(45)"/>
-            <rect class="cls-10" x="-234.46" y="679.53" width="858.43" height="153.44" transform="translate(591.79 83.79) rotate(45)"/>
-            <rect class="cls-12" x="-55.6" y="114.73" width="633.33" height="158.35" transform="translate(-60.64 241.4) rotate(-45)"/>
-            <rect class="cls-13" x="697.63" y="378.85" width="153.91" height="841.46" transform="translate(792.26 -313.52) rotate(45)"/>
-          </g>
-          <g class="outer-rectangles"> <!--äussere Rechtecke-->
-            <rect class="cls-2" x="903" y="224" width="112" height="565"/>
-            <rect class="cls-4" x="-3" y="208" width="114" height="604"/>
-            <rect class="cls-9" x="204" width="588" height="111"/>
-            <rect class="cls-6" x="192" y="903" width="596" height="110"/>
-          </g>
+  <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1338.95 1338.95">
+    <defs>
+      <clipPath id="clippath">
+        <rect class="cls-8" x="167" y="165.45" width="1010" height="1010"/>
+      </clipPath>
+      <clipPath id="clippath-1">
+        <rect class="cls-7" x="196.1" y="196.07" width="946.75" height="946.82" transform="translate(-277.31 669.48) rotate(-45)"/>
+      </clipPath>
+    </defs>
+    <g class="cls-16">
+      <rect class="cls-3" x="165" y="163.45" width="1010" height="1010"/>
+      <g>
+        <g class="inner-rectangles">
+          <rect class="cls-12" x="167" y="165.45" width="1010" height="230"/>
+          <rect class="cls-9" x="167" y="945.45" width="1010" height="230"/>
+          <rect class="cls-5" x="948" y="165.45" width="230" height="1010"/>
+          <rect class="cls-15" x="165.5" y="164.45" width="230" height="1009"/>
         </g>
-      </svg>
-</body>
+        <g class="middle-rectangles">
+          <polygon class="cls-1" points="327.49 165.15 326.63 1174.96 167.49 1175.15 168.34 165.33 327.49 165.15"/>
+          <polygon class="cls-11" points="1177.43 164.98 1176.55 1174.8 1017.43 1174.98 1018.3 165.16 1177.43 164.98"/>
+          <polygon class="cls-13" points="168.2 1015.41 1177.95 1014.78 1177.71 1174.15 167.95 1174.78 168.2 1015.41"/>
+          <polygon class="cls-14" points="1177.3 164.45 1177.11 323.59 167.3 324.45 167.48 165.3 1177.3 164.45"/>
+        </g>
+        <g class="outer-rectangles">
+          <rect class="cls-2" x="1067" y="164.45" width="110" height="1010"/>
+          <rect class="cls-4" x="168" y="165.45" width="110" height="1010"/>
+          <rect class="cls-10" x="167.55" y="165.12" width="1010" height="110"/>
+          <rect class="cls-6" x="167.59" y="1065.45" width="1010" height="110"/>
+        </g>
+      </g>
+    </g>
+  </svg></body>
 </html>

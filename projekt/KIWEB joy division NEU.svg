@@ -1,0 +1,96 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2027.5 2026">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4070b9;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #1fc4f5;
+      }
+
+      .cls-3 {
+        fill: #000;
+      }
+
+      .cls-4 {
+        fill: #f03525;
+      }
+
+      .cls-5 {
+        fill: #376640;
+      }
+
+      .cls-6 {
+        fill: #91c03a;
+      }
+
+      .cls-7 {
+        fill: none;
+      }
+
+      .cls-15 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-8 {
+        fill: #5a3936;
+      }
+
+      .cls-16 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-9 {
+        fill: #9c7eb8;
+      }
+
+      .cls-10 {
+        fill: #973832;
+      }
+
+      .cls-11 {
+        fill: #613839;
+      }
+
+      .cls-12 {
+        fill: #a63233;
+      }
+
+      .cls-13 {
+        fill: #00a849;
+      }
+
+      .cls-14 {
+        fill: #753337;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-7" x="537.6" y="538.62" width="946.75" height="946.82" transform="translate(-419.5 1011.28) rotate(-45)"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-7" x="506.5" y="506" width="1015" height="1013"/>
+    </clipPath>
+  </defs>
+  <g class="cls-16">
+    <rect class="cls-3" x="506" y="505.5" width="1016" height="1014"/>
+    <g class="cls-15">
+      <rect class="cls-11" x="359" y="506.5" width="1312" height="222"/>
+      <rect class="cls-8" x="359" y="1297.5" width="1312" height="222"/>
+      <rect class="cls-5" x="1299" y="356.5" width="222" height="1312"/>
+      <rect class="cls-14" x="507" y="355.56" width="222" height="1312"/>
+      <rect class="cls-1" x="1178.17" y="-67.38" width="402.24" height="1431.18" transform="translate(-54.37 1165.16) rotate(-45)"/>
+      <rect class="cls-10" x="136.16" y="1266.61" width="1192.18" height="395.27" transform="translate(1249.85 -88.91) rotate(45)"/>
+      <rect class="cls-12" x="-32.59" y="534.64" width="1188.65" height="400.19" transform="translate(-355.01 612.41) rotate(-45)"/>
+      <rect class="cls-13" x="1094.9" y="871.36" width="397.87" height="1187.94" transform="translate(1415.1 -485.69) rotate(45)"/>
+      <rect class="cls-2" x="1409.5" y="506" width="112" height="1013"/>
+      <rect class="cls-4" x="506.5" y="507" width="111" height="1012"/>
+      <rect class="cls-9" x="506.5" y="506" width="1015" height="111"/>
+      <rect class="cls-6" x="506.5" y="1409" width="1015" height="110"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,102 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1338.95 1338.95">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4070b9;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #1fc4f5;
+      }
+
+      .cls-3 {
+        fill: #000;
+      }
+
+      .cls-4 {
+        fill: #f03525;
+      }
+
+      .cls-5 {
+        fill: #376640;
+      }
+
+      .cls-6 {
+        fill: #91c03a;
+      }
+
+      .cls-7 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-7, .cls-8 {
+        fill: none;
+      }
+
+      .cls-16 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-9 {
+        fill: #5a3936;
+      }
+
+      .cls-10 {
+        fill: #9c7eb8;
+      }
+
+      .cls-11 {
+        fill: #973832;
+      }
+
+      .cls-12 {
+        fill: #613839;
+      }
+
+      .cls-13 {
+        fill: #a63233;
+      }
+
+      .cls-14 {
+        fill: #00a849;
+      }
+
+      .cls-15 {
+        fill: #753337;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-8" x="167" y="165.45" width="1010" height="1010"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-7" x="196.1" y="196.07" width="946.75" height="946.82" transform="translate(-277.31 669.48) rotate(-45)"/>
+    </clipPath>
+  </defs>
+  <g class="cls-16">
+    <rect class="cls-3" x="165" y="163.45" width="1010" height="1010"/>
+    <g>
+      <g>
+        <rect class="cls-12" x="167" y="165.45" width="1010" height="230"/>
+        <rect class="cls-9" x="167" y="945.45" width="1010" height="230"/>
+        <rect class="cls-5" x="948" y="165.45" width="230" height="1010"/>
+        <rect class="cls-15" x="165.5" y="164.45" width="230" height="1009"/>
+      </g>
+      <g>
+        <polygon class="cls-1" points="327.49 165.15 326.63 1174.96 167.49 1175.15 168.34 165.33 327.49 165.15"/>
+        <polygon class="cls-11" points="1177.43 164.98 1176.55 1174.8 1017.43 1174.98 1018.3 165.16 1177.43 164.98"/>
+        <polygon class="cls-13" points="168.2 1015.41 1177.95 1014.78 1177.71 1174.15 167.95 1174.78 168.2 1015.41"/>
+        <polygon class="cls-14" points="1177.3 164.45 1177.11 323.59 167.3 324.45 167.48 165.3 1177.3 164.45"/>
+      </g>
+      <g>
+        <rect class="cls-2" x="1067" y="164.45" width="110" height="1010"/>
+        <rect class="cls-4" x="168" y="165.45" width="110" height="1010"/>
+        <rect class="cls-10" x="167.55" y="165.12" width="1010" height="110"/>
+        <rect class="cls-6" x="167.59" y="1065.45" width="1010" height="110"/>
+      </g>
+    </g>
+  </g>
+</svg>
