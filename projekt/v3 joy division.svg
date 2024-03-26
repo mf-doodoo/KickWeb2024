@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1338.95 1338.95">
   <defs>
     <style>
@@ -92,10 +93,10 @@
         <polygon class="cls-14" points="1177.3 164.45 1177.11 323.59 167.3 324.45 167.48 165.3 1177.3 164.45"/>
       </g>
       <g>
-        <rect class="cls-2" x="1067" y="164.45" width="110" height="1010"/>
-        <rect class="cls-4" x="168" y="165.45" width="110" height="1010"/>
-        <rect class="cls-10" x="167.55" y="165.12" width="1010" height="110"/>
-        <rect class="cls-6" x="167.59" y="1065.45" width="1010" height="110"/>
+        <rect class="cls-2" x="1067" y="164.45" width="250" height="1010"/>
+        <rect class="cls-4" x="28" y="165.45" width="250" height="1010"/>
+        <rect class="cls-10" x="167.55" y="25.12" width="1010" height="250"/>
+        <rect class="cls-6" x="167.59" y="1065.45" width="1010" height="250"/>
       </g>
     </g>
   </g>
