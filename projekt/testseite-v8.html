@@ -154,6 +154,12 @@
 
       }
 
+      .visible {
+          opacity: 1;
+          transition: opacity 0.5s ease; /* Optional: Fügen Sie eine Übergangsanimation hinzu */
+        }
+
+
       @keyframes innenaussenRechts {
             0% {
                 transform: rotate(0deg);
@@ -183,6 +189,8 @@
                 transform: rotate(360deg);
             }
         }
+
+
 
     </style>
 
@@ -314,6 +322,41 @@
             </p>
         </section>
     </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+            var innerGroup = document.getElementById('innen');
+            var middleGroup = document.getElementById('mittel');
+            var outerGroup = document.getElementById('aussen');
+
+            var innerGroupVisible = false;
+            var middleGroupVisible = false;
+            var outerGroupVisible = false;
+
+            function checkVisibility() {
+                var windowHeight = window.innerHeight;
+                var scrollY = window.scrollY || window.pageYOffset;
+
+                if (!innerGroupVisible && scrollY + windowHeight > innerGroup.offsetTop) {
+                    innerGroup.classList.add('visible');
+                    innerGroupVisible = true;
+                }
+
+                if (!middleGroupVisible && scrollY + windowHeight > middleGroup.offsetTop) {
+                    middleGroup.classList.add('visible');
+                    middleGroupVisible = true;
+                }
+
+                if (!outerGroupVisible && scrollY + windowHeight > outerGroup.offsetTop) {
+                    outerGroup.classList.add('visible');
+                    outerGroupVisible = true;
+                }
+            }
+
+            window.addEventListener('scroll', checkVisibility);
+            checkVisibility(); // Initial check on page load
+        });
+    </script>
 
 
   </body>
