@@ -3,55 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mike Joyce - Joy Division</title>
-    <link rel="stylesheet" href="testseite-v5.css">
+    <title>""Joy Division" by Mike Joyce" by Ardit Stojkaj</title>
 
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
        body {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-            background-color: antiquewhite;
+        font-family: "Roboto", sans-serif;
+        background-color: antiquewhite;
         }
 
-        .title {
+        section.plakat{
+          height: auto;
+          padding: 1px;
+          border: 1px;
+        }
+
+        h1, h2{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .text {
             display: grid;
-            grid-template-columns: 1.3fr 1fr; /* Two equal columns */
+            grid-template-columns: repeat(4, 1fr); /* vier Spalten */
+            grid-template-rows: 1fr 1fr 1fr; /* drei Zeilen */
             grid-gap: 0px; /* Gap between grid items */
+            border: 1px dotted black;
             align-items: last baseline;
+            justify-items: center;
         }
 
-        h1-container {
-            font-size: 10vw;
-            /*border-style: solid;
-            border-width: 1px;*/
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
+        .h1-joy {
+            font-size: 8vw;
+            grid-row: 1/2;
+            grid-column: 1/3;
             white-space: nowrap;
             justify-content: center;
             border-right: 50px;
+            
         }
 
-        h2-container {
-            font-size: 3vw;
-            /*border-style: solid;
-            border-width: 1px;*/
+        .h2-guest {
+            font-size: 2vw;
+            grid-row: 1/2;
+            grid-column: 3/5;
             justify-content: end;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;   
+            white-space: nowrap;
         }
 
+        p{
+            grid-row: 4/5;
+        }
+
+        p.tag{
+            grid-column: 1/2;
+            font-size: 2vw;
+            font-weight:bold;
+            text-align: left;
+            padding: 0px;
+            border-style: solid;
+            border-width: 0px;
+            margin-bottom: 0px;
+        }
+
+        p.ort{
+            grid-column: 1/4;
+            font-size: 2vw;
+            font-weight:bold;
+            text-align: left;
+            padding: 0px;
+            border-style: solid;
+            border-width: 0px;
+            margin-bottom: 0px;
+            margin-right: 0px;
+        }
+
+        p.rest{
+            grid-column: 3/5;
+            font-size: 2vw;
+            font-weight:bold;
+            text-align: left;
+            padding: 0px;
+            border-style: solid;
+            border-width: 0px;
+            margin-bottom: 0px;
+        }
 
         .infos {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* Two equal columns */
             grid-gap: 0px; /* Gap between grid items */
-            margin-top: 200px;
             margin-bottom: 0px;
-
         }
+
 
 
         @media all and (min-width: 640px){
@@ -239,25 +282,24 @@
   </svg>
 
     <div id="plakat">
-        <section class="title">
-            <div class="h1-container">
+        <section class="text">
+            <div class="h1-joy">
                 <h1>joy division</h1>
             </div>
-            <div class="h2-container">
+            <div class="h2-guest">
                 <h2>with special guest </br>killing joke & section 25</h2>
             </div>
-        </section>
-        <section class="infos">
-            <p>friday</br>
-                february 29 1980 / 7:30
+            
+            <p class="tag">friday</br>
+              february 29 1980 / 7:30
             </p>
             <p class="ort">
-                lyceum theatre</br>
-                westminster, london
+              lyceum theatre</br>
+              westminster, london
             </p>
-            <p>
-                presented by fresh music </br>
-                £2.50 tickets available at lyceum
+            <p class="rest">
+              presented by fresh music </br>
+              £2.50 tickets available at lyceum
             </p>
         </section>
     </div>
