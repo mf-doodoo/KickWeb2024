@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    > <link rel="stylesheet" href="animation test.css">
+    <title>Animation Test</title>
+    <link rel="stylesheet" href="animation_test.css">
 
     <style>
       .inner-rectangles {
         transform-origin: 50% 50%;
-        animation: innenaussenRechts 15s infinite;
-        animation-direction: alternate-reverse
+        animation: innenaussenRechts 5s infinite;
+        animation-direction: normal;
+        animation-timing-function: linear;
       }
 
       .middle-rectangles {
         transform-origin: 50% 50%;
-        animation: mitteLinks 15s infinite;
-        animation-direction: alternate-reverse;
+        animation: mitteLinks 5s infinite;
+        animation-direction: normal;
+        animation-timing-function: linear;
+
       }
 
       .outer-rectangles {
         transform-origin: 50% 50%;
-        animation: innenaussenRechts 15s infinite;
-        animation-direction: alternate-reverse
+        animation: innenaussenRechts 5s infinite;
+        animation-direction: normal;
+        animation-timing-function: linear;
       }
 
       .cls-7{
@@ -34,7 +38,7 @@
 
       }
 
-     /* @keyframes innenaussenRechts {
+      @keyframes innenaussenRechts {
             0% {
                 transform: rotate(0deg);
             }
@@ -46,7 +50,7 @@
 
         @keyframes mitteLinks {
             0% {
-                transform: rotate(45deg);
+                transform: rotate(0deg);
             }
 
             100% {
@@ -61,7 +65,7 @@
 
             100% {
                 transform: rotate(360deg);
-            }*/
+            }
         }
     </style>
 
@@ -138,6 +142,7 @@
           fill: #753337;
         }
       </style>
+      
       <clipPath id="clippath">
         <rect class="cls-8" x="208.3" y="209.85" width="1010" height="1010"/>
       </clipPath>
@@ -148,19 +153,19 @@
     <g class="cls-16">
       <rect class="cls-3" x="206.3" y="207.85" width="1010" height="1010"/>
       <g>
-        <g id="innen">
+        <g id="innen" class="inner-rectangles">
           <rect class="cls-12" x="208.3" y="209.85" width="1010" height="230"/>
           <rect class="cls-9" x="208.3" y="989.85" width="1010" height="230"/>
           <rect class="cls-5" x="989.3" y="209.85" width="230" height="1010"/>
           <rect class="cls-15" x="206.8" y="208.85" width="230" height="1009"/>
         </g>
-        <g id="mittel">
+        <g id="mittel" class="middle-rectangles">
           <polygon class="cls-1" points="113.03 601.4 826.48 1316.05 714.07 1428.72 .63 714.06 113.03 601.4"/>
           <polygon class="cls-11" points="713.91 .29 1427.34 714.96 1314.95 827.6 601.52 112.93 713.91 .29"/>
           <polygon class="cls-13" points="601.63 1315.26 1315.18 600.81 1427.7 713.68 714.14 1428.13 601.63 1315.26"/>
           <polygon class="cls-14" points="713.44 0 825.84 112.66 112.4 827.31 0 714.66 713.44 0"/>
         </g>
-        <g id="aussen">
+        <g id="aussen" class="outer-rectangles">
           <rect class="cls-2" x="1108.3" y="208.85" width="250" height="1010"/>
           <rect class="cls-4" x="69.3" y="209.85" width="250" height="1010"/>
           <rect class="cls-10" x="208.84" y="69.52" width="1010" height="250"/>
@@ -168,5 +173,6 @@
         </g>
       </g>
     </g>
-  </svg></body>
+  </svg>
+</body>
 </html>
