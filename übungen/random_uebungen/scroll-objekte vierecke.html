@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scroll Animation</title>
+<style>
+    /* Stile für die hinzugefügten Elemente */
+    .container {
+        position: relative;
+        width: 100%;
+        height: 2000px; /* Höhe des Scroll-Bereichs */
+    }
+
+    .square {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid black;
+        box-sizing: border-box;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="square" style="width: 400px; height: 400px;"></div>
+</div>
+
+<script>
+    var container = document.querySelector('.container');
+    var initialSquare = document.querySelector('.square');
+    var lastScrollY = window.scrollY;
+
+    function addNestedSquare() {
+        var scrollDistance = Math.abs(window.scrollY - lastScrollY);
+        // Nur hinzufügen, wenn der Scrollabstand größer als 100 ist
+        if (scrollDistance > 100) {
+            var lastSquare = container.lastElementChild;
+            var newSize = parseFloat(lastSquare.style.width) * 0.8; // Neues Viereck um 80% kleiner
+            var newSquare = document.createElement('div');
+            newSquare.classList.add('square');
+            newSquare.style.width = newSize + 'px';
+            newSquare.style.height = newSize + 'px';
+            container.appendChild(newSquare);
+            lastScrollY = window.scrollY; // Aktualisiere die letzte Scrollposition
+        }
+    }
+
+    function removeAdditionalSquares() {
+        var squares = document.querySelectorAll('.square');
+        for (var i = squares.length - 1; i > 0; i--) {
+            squares[i].parentNode.removeChild(squares[i]);
+        }
+    }
+
+    function handleScroll() {
+        if (window.scrollY <= 0) {
+            removeAdditionalSquares();
+        } else {
+            addNestedSquare();
+        }
+    }
+
+    // Scroll-Ereignis abhören
+    window.addEventListener('scroll', handleScroll);
+</script>
+
+</body>
+</html>

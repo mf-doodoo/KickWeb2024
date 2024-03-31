@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scroll Animation</title>
+<style>
+    /* Stile für die hinzugefügten Elemente */
+    .spawned-element {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+    }
+
+    .blue {
+        background-color: blue;
+    }
+
+    .red {
+        background-color: red;
+    }
+</style>
+</head>
+<body>
+
+<div id="container" style="height: 2000px; position: relative;">
+    <!-- Platzhalter-Div für die Animation -->
+</div>
+
+<script>
+    // Funktion, um ein neues Element zu erstellen und dem DOM hinzuzufügen
+    function spawnElement(color) {
+        // Neues Element erstellen
+        var element = document.createElement("div");
+        element.className = "spawned-element " + color;
+
+        // Zufällige Position innerhalb des Containers festlegen
+        var container = document.getElementById("container");
+        var randomX = Math.floor(Math.random() * container.offsetWidth);
+        var randomY = Math.floor(Math.random() * container.offsetHeight);
+        element.style.left = randomX + "px";
+        element.style.top = randomY + "px";
+
+        // Element dem Container hinzufügen
+        container.appendChild(element);
+    }
+
+    // Scroll-Ereignis-Handler
+    function handleScroll() {
+        // Überprüfen, ob der Benutzer nach oben scrollt
+        if (window.scrollY <= 0) {
+            // Neues blau gefärbtes Element erstellen und hinzufügen
+            spawnElement("blue");
+            // Neues rotes Element erstellen und hinzufügen
+            spawnElement("red");
+        }
+    }
+
+    // Scroll-Ereignis abhören
+    window.addEventListener("scroll", handleScroll);
+</script>
+
+</body>
+</html>
