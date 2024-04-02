@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Blend Modes</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Roboto';
+            background-color:grey;
+            /*position: relative;  /* um Probleme mit Hintergrund zu beheben */
+            /*z-index: 2;*/
+
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 100px;
+            font-weight: bold;
+            margin-bottom: 80px;
+        }
+
+        .title1 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-top: 150px;
+        }
+
+        .blend-mode {
+            margin-bottom: 50px;
+        }
+
+        .blend-mode:last-child {
+            margin-bottom: 0;
+        }
+
+        .square-container { /* Parent Container */
+            position: relative;
+            width: 600px;
+            height: 450px;
+            margin-bottom: 200px;
+            isolation: isolate; /* um Objekt vom Hintergrund zu isolieren */
+        }
+
+        .square {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+
+
+        }
+
+        .square1 {
+            background-color: #ff8533;
+            top: 0;
+            left: 0;
+        }
+
+        .square2 {
+            background-color: #705dff;
+            top: 0px;
+            left: 200px;
+        }
+
+        .square3 {
+            background-color: #50d472;
+            top: 200px;
+            left: 100px;
+        }
+
+        .p1 {
+            width: 600px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+
+        /* Blend Modes */
+        .blend-mode-normal .square {
+            mix-blend-mode: normal;
+        }
+
+        .blend-mode-color .square {
+            mix-blend-mode: color;
+
+        }
+
+        .blend-mode-color-burn .square {
+            mix-blend-mode: color-burn;
+
+        }
+
+        .blend-mode-color-dodge .square {
+            mix-blend-mode: color-dodge;
+
+        }
+
+        .blend-mode-darken .square {
+            mix-blend-mode: darken;
+
+        }
+
+        .blend-mode-difference .square {
+            mix-blend-mode: difference;
+
+        }
+
+        .blend-mode-exclusion .square {
+            mix-blend-mode: exclusion;
+
+        }
+
+        .blend-mode-hard-light .square {
+            mix-blend-mode: hard-light;
+
+        }
+
+        .blend-mode-hue .square {
+            mix-blend-mode: hue;
+
+        }
+
+        .blend-mode-lighten .square {
+            mix-blend-mode: lighten;
+
+        }
+
+        .blend-mode-luminosity .square {
+            mix-blend-mode: luminosity;
+
+        }
+
+        .blend-mode-multiply .square {
+            mix-blend-mode: multiply;
+
+        }
+
+        .blend-mode-overlay .square {
+            mix-blend-mode: overlay;
+
+        }
+
+        .blend-mode-saturation .square {
+            mix-blend-mode: saturation;
+
+        }
+
+        .blend-mode-screen .square {
+            mix-blend-mode: screen;
+
+        }
+
+        .blend-mode-soft-light .square {
+            mix-blend-mode: soft-light;
+
+        }
+    </style>
+
+
+
+
+
+
+
+</head>
+
+<body>
+    <h1 class="title">CSS Blend Modes</h1>
+    <div class="container">
+        <div class="blend-mode-normal">
+            <div class="title1">normal</div>
+            <div class="square-container">
+                <div class="square square1"></div>
+                <div class="square square2"></div>
+                <div class="square square3"></div>
+            </div>
+            <p class="p1">No blending occurs; the top layer completely obscures the bottom layer.</p>
+
+        </div>
+    </div>
+    </div>
+    <div class="blend-mode-color">
+        <div class="title1">color</div>
+        <div class="square-container">
+            <div class="square square1"></div>
+            <div class="square square2"></div>
+            <div class="square square3"></div>
+        </div>
+        <p class="p1">Multiplies the colors of the top layer with the base layer, resulting in a blended color.</p>
+    </div>
+    <div class="blend-mode-color-burn">
+        <div class="title1">color-burn</div>
+        <div class="square-container">
+            <div class="square square1"></div>
+            <div class="square square2"></div>
+            <div class="square square3"></div>
+        </div>
+        <p class="p1">Darkens the base layer to reflect the blend layer's colors, resulting in a darker image. </p>
+    </div>
+    <div class="blend-mode-color-dodge">
+        <div class="title1">color-doge</div>
+        <div class="square-container">
+            <div class="square square1"></div>
+            <div class="square square2"></div>
+            <div class="square square3"></div>
+        </div>
+        <p class="p1">Brightens the base layer to reflect the blend layer's colors, resulting in a lighter image. </p>
+    </div>
+    <div class="blend-mode-darken">
+        <div class="title1">darken</div>
+        <div class="square-container">
+            <div class="square square1"></div>
+            <div class="square square2"></div>
+            <div class="square square3"></div>
+        </div>
+        <p class="p1">Selects the darker color from either the base or blend layer for each pixel.</p>
+    </div>
+    <div class=" blend-mode-difference">
+        <div class="title1">difference</div>
+        <div class="square-container">
+            <div class="square square1"></div>
+            <div class="square square2"></div>
+            <div class="square square3"></div>
+        </div>
+        <p class="p1">Subtracts the blend layer's color from the base layer's color or vice versa, resulting in a
+            high-contrast image. </p>
+    </div>
+    <div class="blend-mode-exclusion">
+        <div class="title1">exclusion</div>
+        <div class="square-container">
+            <div class="square square1"></div>
+            <div class="square square2"></div>
+            <div class="square square3"></div>
+        </div>
+        <p class="p1"> Similar to the Difference mode but with less contrast, often used for special effects. </p>
+    </div>
+    <div class="blend-mode-hard-light">
+        <div class="title1">hard-light</div>
+        <div class="square-container">
+            <div class="square square1"></div>
+            <div class="square square2"></div>
+            <div class="square square3"></div>
+        </div>
+        <p class="p1">Multiplies or screens the colors, depending on the blend color's lightness, often resulting in
+            intense contrast. </p>
+    </div>
+    <div class="blend-mode-hue">
+        <div class="title1">hue</div>
+        <div class="square-container">
+            <div class="square square1"></div>
+            <div class="square square2"></div>
+            <div class="square square3"></div>
+        </div>
+        <p class="p1">Retains the luminance and saturation of the base layer while adopting the hue of the blend layer.
+        </p>
+    </div>
+    <div class="blend-mode-lighten">
+        <div class="title1">lighten</div>
+        <div class="square-container">
+            <div class="square square1"></div>
+            <div class="square square2"></div>
+            <div class="square square3"></div>
+        </div>
+        <p class="p1">Selects the lighter color from either the base or blend layer for each pixel. </p>
+    </div>
+    <div class="blend-mode-luminosity">
+        <div class="title1">luminosity</div>
+        <div class="square-container">
+            <div class="square square1"></div>
+            <div class="square square2"></div>
+            <div class="square square3"></div>
+        </div>
+        <p class="p1">Retains the hue and saturation of the base layer while adopting the luminance of the blend layer.
+        </p>
+    </div>
+    <div class="blend-mode-multiply">
+        <div class="title1">multiply</div>
+        <div class="square-container">
+            <div class="square square1"></div>
+            <div class="square square2"></div>
+            <div class="square square3"></div>
+        </div>
+        <p class="p1">Multiplies the colors of the base and blend layers, resulting in a darker color.</p>
+    </div>
+    <div class="blend-mode-overlay">
+        <div class="title1">overlay</div>
+        <div class="square-container">
+            <div class="square square1"></div>
+            <div class="square square2"></div>
+            <div class="square square3"></div>
+        </div>
+        <p class="p1">Combines Multiply and Screen blend modes, enhancing contrast while preserving highlights and
+            shadows.</p>
+    </div>
+    <div class="blend-mode-saturation">
+        <div class="title1">saturation</div>
+        <div class="square-container">
+            <div class="square square1"></div>
+            <div class="square square2"></div>
+            <div class="square square3"></div>
+        </div>
+        <p class="p1">Retains the hue and luminance of the base layer while adopting the saturation of the blend layer.
+        </p>
+    </div>
+    <div class="blend-mode-screen">
+        <div class="title1">screen</div>
+        <div class="square-container">
+            <div class="square square1"></div>
+            <div class="square square2"></div>
+            <div class="square square3"></div>
+        </div>
+        <p class="p1">Inverts the colors of the base and blend layers, multiplies them, and inverts the result,
+            resulting in a lighter color. </p>
+    </div>
+    <div class="blend-mode-soft-light">
+        <div class="title1">soft-light</div>
+        <div class="square-container">
+            <div class="square square1"></div>
+            <div class="square square2"></div>
+            <div class="square square3"></div>
+        </div>
+        <p class="p1">This is a variation of hard-light. Similar to Overlay but with a softer effect, often used for
+            subtle adjustments. </p>
+    </div>
+    </div>
+</body>
+
+</html>

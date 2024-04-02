@@ -5,11 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Scroll Animation</title>
 <style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 6000px; /* Höhe des Scroll-Bereichs */
+
+    }
+    
     /* Stile für die hinzugefügten Elemente */
     .container {
-        position: relative;
+        position: sticky;
+        top: 200px;
         width: 100%;
-        height: 2000px; /* Höhe des Scroll-Bereichs */
     }
 
     .square {
@@ -46,6 +53,12 @@
             container.appendChild(newSquare);
             lastScrollY = window.scrollY; // Aktualisiere die letzte Scrollposition
         }
+        if (window.scrollY > 500) {
+            container.style.position = "relative";
+            console.log("position relative");
+        }
+
+        console.log(scrollDistance);
     }
 
     function removeAdditionalSquares() {

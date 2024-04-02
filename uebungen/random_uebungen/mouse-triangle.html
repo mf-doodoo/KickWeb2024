@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Follow Triangle Cursor</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #222;
+            color: #fff;
+        }
+
+        #custom-cursor {
+            width: 0;
+            height: 0;
+            border-left: 1px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 5custom 0px solid #fff;
+            /* Farbe des Dreiecks */
+            position: absolute;
+            pointer-events: none;
+            z-index: 9999;
+            /* Stellen Sie sicher, dass das Dreieck über allem anderen liegt */
+        }
+
+        body {
+            cursor: none;
+            /* Verberge den Standard-Mauszeiger */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="custom-cursor"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var customCursor = document.getElementById("custom-cursor");
+            document.addEventListener("mousemove", function (e) {
+                var x = e.clientX;
+                var y = e.clientY;
+                customCursor.style.left = x + "px";
+                customCursor.style.top = y + "px";
+            });
+
+            document.body.addEventListener("mouseenter", function () {
+                var bgColor = window.getComputedStyle(document.body).getPropertyValue('background-color');
+                customCursor.style.borderBottomColor = invertColor(bgColor);
+            });
+
+            function invertColor(color) {
+                // Convert RGB to HEX
+                color = color.substring(4, color.length - 1)
+                    .replace(/ /g, '')
+                    .split(',');
+                var r = parseInt(color[0], 10);
+                var g = parseInt(color[1], 10);
+                var b = parseInt(color[2], 10);
+                r = (255 - r).toString(16);
+                g = (255 - g).toString(16);
+                b = (255 - b).toString(16);
+                return "#" + padZero(r) + padZero(g) + padZero(b);
+            }
+
+            function padZero(str) {
+                return str.length === 1 ? "0" + str : str;
+            }
+        });
+    </script>
+</body>
+
+</html>
