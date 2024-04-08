@@ -16,9 +16,12 @@
     }
 
     .container-SVG {
-      width: auto;
+      /*height: 500px;*/
       display: grid;
       justify-items: center;
+      overflow: auto;
+      position: sticky;
+      top: 0;
     }
 
     section.plakat {
@@ -494,35 +497,51 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      var elements = document.querySelectorAll('.eck1, .eck2, .eck3, .eck4, .eck5, .eck6, .eck7, .eck8, .eck9');
-      
+      var elements = document.querySelectorAll('.eck1, .eck2, .eck3, .eck4, .eck5, .eck6, .eck7, .eck8, .eck9, .cls-5');
+  
       // Setzen der Anfangsdeckkraft auf 0
       elements.forEach(function(element) {
         element.style.opacity = '0';
       });
-
+  
       // Umkehren der Elementreihenfolge
       var reversedElements = Array.prototype.slice.call(elements).reverse();
-
+  
       function fadeInElements() {
         var scrollPosition = window.scrollY || window.pageYOffset;
         reversedElements.forEach(function(element, index) {
-          // Berechnen Sie die Position jedes Elements relativ zum Fenster
+          // Berechnen der Position jedes Elements relativ zum Fenster
           var bounding = element.getBoundingClientRect();
-          
+  
           // Wenn das Element im Sichtbereich ist und nach unten gescrollt wird, erhöhen Sie seine Deckkraft
-          if (bounding.top < window.innerHeight && scrollPosition > bounding.top + 115 * index) {
+          if (bounding.top < window.innerHeight && scrollPosition > bounding.top + 500 * index) {
             setTimeout(function() {
-              element.style.opacity = '1';
-            }, index * 500); // Ändern Sie 500 nach Ihren Anforderungen für den Zeitverzug
+              fadeElement(element, 0, 1, 500); // Zeitverzögerung anpassen
+            }, index * 500); // Zeitverzögerung anpassen
           }
         });
+  
+        console.log(scrollPosition);
       }
-
+  
+      function fadeElement(element, startOpacity, endOpacity, duration) {
+        var startTime;
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var progress = timestamp - startTime;
+          var opacity = startOpacity + (endOpacity - startOpacity) * Math.min(progress / duration, 1);
+          element.style.opacity = opacity;
+          if (progress < duration) {
+            window.requestAnimationFrame(step);
+          }
+        }
+        window.requestAnimationFrame(step);
+      }
+  
       window.addEventListener('scroll', fadeInElements);
     });
   </script>
-
+  
   <!--script
     /*document.addEventListener('DOMContentLoaded', function () {
       var innerGroup = document.getElementById('innen');
