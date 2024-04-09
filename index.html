@@ -1,20 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
+    <title>Index</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Ardit's Wild Ride</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        body,
+        h1 {
+            font-family: "Montserrat", sans-serif
+            
+        }
 
+        .w3-opacity {
+            position: sticky;
+            overflow: auto;
+        }
+
+        img {
+            margin-bottom: -7px
+        }
+
+        .w3-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 0px;
+        }
+
+        .w3-third {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+
+        .square {
+            width: 100%;
+            height: 50px;
+            vertical-align: middle;
+            /* or whatever height you want */
+            text-align: center;
+            /* adjust as needed */
+            color: rgb(255, 255, 255);
+            background-color: #000000;
+            margin-bottom: 0px;
+            border: 1px solid #f8f8f8;
+            transition: background-color 0.3s;
+            /* Smooth transition for background color change */
+            display: flex;
+            /* Use flexbox */
+            justify-content: center;
+            /* Center horizontally */
+            align-items: center;
+            /* Center vertically */
+        }
+
+        .square:hover {
+            background-color: #333333;
+            /* Change background color on hover */
+        }
+
+        .square a {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            z-index: 1;
+            /* Ensure link is clickable over pseudo-element */
+        }
+
+        /*.square::after {
+            content: counter(square-counter);
+            counter-increment: square-counter;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            z-index: 0; /* Ensure pseudo-element is behind link 
+        }*/
     </style>
+</head>
 
-</head
->
 <body>
 
-    <h1>Welcome to Ardit's Wild Ride</h1>
-    <p>Here you will find my process and exercises for KIWEB 2024.</p>
-    <p>Check out the <li><a href="uebungen/">übungen</a></li>page to see the exercises I've done.</p>
-    <p>Check out the <li><a href="projekt/">projekt</a></li> page to see my project in its different states.</p>
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+            <i class="fa fa-remove"></i>
+        </a>
+        <div class="w3-bar-block w3-center">
+            <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Projekt</a>
+            <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Übungen</a>
+            <!--a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">??</a-->
+            <!--a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">??</a-->
+        </div>
+    </nav>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-content" style="max-width:1500px">
+
+        <!-- Header -->
+        <div class="w3-opacity">
+            <span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+            <div class="w3-clear"></div>
+            <header class="w3-center w3-margin-bottom">
+                <h1><b>KICKWEB</b></h1>
+                <p><b>Here you will find my process and exercises for KIWEB 2024.</b></p>
+            </header>
+        </div>
+
+        <!-- Link-Galerie -->
+        <div class="w3-row" id="myGrid" style="margin-bottom:128px">
+            <div class="w3-third">
+                <div class="square"><a href="uebungen\tag1">Tag 1</a></div>
+                <div class="square"><a href="uebungen\tag2">Tag 2</a></div>
+                <div class="square"><a href="uebungen\tag3">Tag 3</a></div>
+                <div class="square"><a href="uebungen\tag4">Tag 4</a></div>
+                <div class="square"><a href="uebungen\tag5">Tag 5</a></div>
+                <div class="square"><a href="uebungen\tag6">Tag 6</a></div>
+                <div class="square"><a href="uebungen\tag7">Tag 7</a></div>
+                <div class="square"><a href="uebungen\tag8">Tag 8</a></div>
+                <div class="square"><a href="projekt\testseite-v12.html">Projekt</a></div>
+            </div>
+        </div>
+
+        <!-- End Page Content -->
+    </div>
+
+    <script>
+        // Open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.width = "100%";
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+
 </body>
+
 </html>
