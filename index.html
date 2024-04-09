@@ -45,7 +45,7 @@
             text-align: center;
             /* adjust as needed */
             color: rgb(255, 255, 255);
-            background-color: #000000;
+            background: #000000;
             margin-bottom: 0px;
             border: 1px solid #f8f8f8;
             transition: background-color 0.3s;
@@ -90,20 +90,10 @@
             text-decoration: none;
             color: inherit;
             position: relative;
-            z-index: 1;
+            z-index: 0;
             /* Ensure link is clickable over pseudo-element */
         }
 
-        /*.square::after {
-            content: counter(square-counter);
-            counter-increment: square-counter;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 24px;
-            z-index: 0; /* Ensure pseudo-element is behind link 
-        }*/
     </style>
 </head>
 
@@ -116,23 +106,23 @@
             <i class="fa fa-remove"></i>
         </a>
         <div class="w3-bar-block w3-center">
-            <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Projekt</a>
-            <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Übungen</a>
-            <!--a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">??</a-->
-            <!--a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">??</a-->
+            <a href="..\projekt\joy-division.jpg" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Original Bild</a>
+            <a href="..\projekt\prozess.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Prozess</a>
+            <a href="..\projekt\Abgabe\Sprint_1.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Sprint 1</a>
+            <a href="..\projekt\Abgabe\Sprint_2_final.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Sprint 2</a>
         </div>
     </nav>
 
-    <!-- !PAGE CONTENT! -->
+    <!--PAGE CONTENT-->
     <div class="w3-content" style="max-width:1500px">
 
-        <!-- Header -->
+        <!--Header-->
         <div class="w3-opacity">
             <span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span>
             <div class="w3-clear"></div>
             <header class="w3-center w3-margin-bottom">
                 <h1><b>KICKWEB</b></h1>
-                <p><b>Here you will find my notes, projects and exercises for KIWEB 2024.</b></p>
+                <p><b>Hier sind die Projekte, der Prozess und einige Übungen für KICKWEB 2024 abgelegt.</b></p>
             </header>
         </div>
 
