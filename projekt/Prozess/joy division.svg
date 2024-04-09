@@ -1,0 +1,102 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1015 1013">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4070b9;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #1fc4f5;
+      }
+
+      .cls-3 {
+        fill: #000;
+      }
+
+      .cls-4 {
+        fill: #f03525;
+      }
+
+      .cls-5 {
+        fill: #376640;
+      }
+
+      .cls-6 {
+        fill: #91c03a;
+      }
+
+      .cls-7 {
+        fill: none;
+      }
+
+      .cls-15 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-8 {
+        fill: #5a3936;
+      }
+
+      .cls-16 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-9 {
+        fill: #9c7eb8;
+      }
+
+      .cls-10 {
+        fill: #973832;
+      }
+
+      .cls-11 {
+        fill: #613839;
+      }
+
+      .cls-12 {
+        fill: #a63233;
+      }
+
+      .cls-13 {
+        fill: #00a849;
+      }
+
+      .cls-14 {
+        fill: #753337;
+      }
+    </style>
+
+
+    <clipPath id="clippath"> <!--Rechteck Maske schräg-->
+      <rect class="cls-7" x="31.1" y="32.62" width="946.75" height="946.82" transform="translate(-210.06 504.93) rotate(-45)"/>
+    </clipPath> <!--Rechteck-->
+    <clipPath id="clippath-1">
+      <rect class="cls-7" width="1015" height="1013"/>
+    </clipPath>
+  </defs>
+  <g class="cls-16"> <!--Rechteck Mitte schwarz-->
+    <rect class="cls-3" x="173" y="175" width="671" height="677"/> <!--Unterklassen-->
+    <g class="inner-rectangles"> <!--innere Rechtecke-->
+      <rect class="cls-11" x="248" y="69" width="506" height="154"/>
+      <rect class="cls-8" x="291" y="793" width="447" height="159"/>
+      <rect class="cls-5" x="792" y="146" width="136" height="621"/>
+      <rect class="cls-14" x="87" y="249" width="134" height="563"/>
+    </g>
+    <g class="middle-rectangles"> <!--mittlere Rechtecke-->
+      <rect class="cls-1" x="383.7" y="176.51" width="858.43" height="157.73" transform="translate(418.68 -500.02) rotate(45)"/>
+      <rect class="cls-10" x="-234.46" y="679.53" width="858.43" height="153.44" transform="translate(591.79 83.79) rotate(45)"/>
+      <rect class="cls-12" x="-55.6" y="114.73" width="633.33" height="158.35" transform="translate(-60.64 241.4) rotate(-45)"/>
+      <rect class="cls-13" x="697.63" y="378.85" width="153.91" height="841.46" transform="translate(792.26 -313.52) rotate(45)"/>
+    </g>
+    <g class="outer-rectangles"> <!--äussere Rechtecke-->
+      <rect class="cls-2" x="903" y="224" width="112" height="565"/>
+      <rect class="cls-4" x="-3" y="208" width="114" height="604"/>
+      <rect class="cls-9" x="204" width="588" height="111"/>
+      <rect class="cls-6" x="192" y="903" width="596" height="110"/>
+    </g>
+  </g>
+</svg>
