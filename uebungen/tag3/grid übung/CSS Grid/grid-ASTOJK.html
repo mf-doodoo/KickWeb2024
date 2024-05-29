@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Grid Beispiel</title>
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+
+/* Header*/
+.left-corner {
+  left: 30px;
+  top: 20px;
+}
+
+.right-corner {
+  right: 30px;
+  top: 20px;
+  text-align: right;
+}
+
+p {
+  font-size: 1rem;
+  position: absolute;
+  color: #CAF0F8;
+  font-weight: 400;
+}
+
+
+
+/*Styles */
+body {
+    background-color: #023E8A;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    padding-top: 10rem;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0;
+    color: #CAF0F8;
+} 
+
+h2 {
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.item-1, .item-2, .item-3, .item-4, .item-5, .item-6, .item-7, .item-8, .item-9, .item-10, .item-11 {
+  align-items: center;
+  background-color: #CAF0F8;
+  color: #023E8A;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  /* border: #000 solid 5px; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grid-container {
+  border: 2px solid #CAF0F8;
+  padding: 1rem;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+
+
+
+
+
+
+
+</style>
+
+
+
+</head>
+<body>
+
+  <header>
+    <p class="left-corner">Kickstart Web <br>Intro zu CSS Grid</p>
+    <p class="right-corner">Yannick Röösli <br> Digital Ideation</p>
+  </header>
+
+
+    <h2>Grid Container</h2>
+    <div class="grid-container">
+
+      <div class="item-1">1</div>
+      <div class="item-2">2</div>
+      <div class="item-3">3</div>
+      <div class="item-4">4</div>
+      <div class="item-5">5</div>
+      <div class="item-6">6</div>
+      <div class="item-7">7</div>
+      <div class="item-8">8</div>
+      <div class="item-9">9</div>
+
+
+    </div>
+  </body>
+</html>

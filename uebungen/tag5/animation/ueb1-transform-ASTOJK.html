@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformationen</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+    
+        }
+        h1{
+            margin-top:100px;
+        }
+        .group {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+           
+        }
+        /* beide elemente liegen ursprünglich übereinander */
+        
+        .not_transformed,
+        .transformed {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            height: 400px;
+            width: 400px;
+        }
+        /* zur visuellen unterscheidung zwei unterschiedliche stile zuweisen */
+        
+        .not_transformed {
+            background-color: black;
+        }
+        
+        .transformed {
+            background-color: rgba(0, 0, 255, 0.5);
+        }
+        
+        .verschieben {
+            transform: translate(200px, 200px);         /* x-Achse, y-Achse */
+        }
+        
+        .drehen {
+            transform: rotate(45deg);
+            transform-origin: center;       /* Drehpunkt center */
+        }
+        
+        .skalieren {
+            transform: scale(0.5, 0.7);     /* für eigene Werte -> Pixel für X und Y */
+            transform-origin: center;
+            color: white;
+            font-size: 5rem;
+            ;
+        }
+        
+        .verzerren {
+            transform: skew(10deg, 10deg);
+            color: white;
+            font-size: 5rem;
+        }
+        
+        .mehrere {
+            transform: rotate(60deg) scale(0.7) skewX(10deg);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Translate</h1>
+        <div class="group">
+            <div class="not_transformed">
+            </div>
+            <div class="transformed verschieben">
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1>Rotate</h1>
+        <div class="group">
+            <div class="not_transformed">
+            </div>
+            <div class="transformed drehen">
+
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1>Scale</h1>
+        <div class="group">
+            <div class="not_transformed">
+            </div>
+            <div class="transformed skalieren">
+                Skalieren
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1>Verzerren</h1>
+        <div class="group">
+            <div class="not_transformed">
+            </div>
+            <div class="transformed verzerren">
+                Verzerren
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1>Mehrere Transformationen</h1>
+        <div class="group">
+            <div class="not_transformed">
+            </div>
+            <div class="transformed mehrere">
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

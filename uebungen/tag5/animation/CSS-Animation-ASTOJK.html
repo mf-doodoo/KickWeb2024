@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .group {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            align-self: center;
+        }
+
+
+        .bigletter:nth-last-of-type(1) {
+            color: rgb(255, 0, 255);
+            mix-blend-mode: multiply;
+            animation-name: rechts;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-timing-function: ease-in-out;
+        }
+
+        .bigletter:nth-last-of-type(2) {
+            color: yellow;
+            mix-blend-mode: multiply;
+            animation-name: mitte;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-timing-function: ease-in-out;
+        }
+
+        .bigletter:nth-last-of-type(3) {
+            color: rgb(0, 255, 255);
+            mix-blend-mode: multiply;
+            animation-name: links;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-timing-function: ease-in-out;
+
+        }
+
+        @keyframes rechts {
+            0% {}
+
+            100% {
+                transform: translate(12vw);
+
+
+            }
+        }
+
+
+
+
+        @keyframes links {
+            0% {}
+
+            100% {
+                transform: translate(-12vw);
+
+
+            }
+        }
+
+        .child {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        .bigletter {
+            font-size: 50vw;
+            font-weight: 900;
+            font-family: Arial, Helvetica, sans-serif;
+            color: red;
+            transition-property: all;
+            transition-duration: 400ms;
+            transition-timing-function: ease-in-out;
+            transform-origin: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="group">
+            <div class="child bigletter">
+                S
+            </div>
+            <div class="child bigletter">
+                S
+            </div>
+            <div class="child bigletter">
+                S
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

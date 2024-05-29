@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .group {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            align-self: center;
+        }
+
+
+        .bigletter:nth-of-type(1) {         /* Zähler fängt bei 1 an */
+            color: rgb(255, 0, 255);
+            mix-blend-mode: multiply;
+           
+        }
+        .group:hover .bigletter:nth-of-type(1) {        /* Hover auf Group, da sonst  */
+            /*---verschiebe das erste S nach links*/
+            transform: translate(-200px, 0px);
+            transition-duration: 1s;
+        }
+
+        .bigletter:nth-of-type(2) {
+            color: yellow;
+            mix-blend-mode: multiply;
+
+        }
+
+        .bigletter:nth-of-type(3) {
+            color: rgb(0, 255, 255);
+            mix-blend-mode: multiply;
+           
+        }
+        .group:hover .bigletter:nth-of-type(3) {
+            /*---verschiebe das dritte S nach rechts*/
+            transform: translate(200px, 0px);
+            transition-duration: 1s;
+        }
+
+        .child {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        .bigletter {
+            font-size: 50vw;
+            font-weight: 900;
+            font-family: Arial, Helvetica, sans-serif;
+            color: red;
+         
+        }
+
+        .links{
+            /*background-color: rgb(71, 147, 76);*/
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="group">
+            <div class="child bigletter">
+                S
+            </div>
+            <div class="child bigletter">
+                S
+            </div>
+            <div class="child bigletter links" >
+                S
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

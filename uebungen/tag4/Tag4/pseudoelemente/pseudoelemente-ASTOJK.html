@@ -1,0 +1,50 @@
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Pseudoelemente</title>
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
+            <style>
+                *{
+                    font-family: 'Roboto', sans-serif;
+                }
+                body{
+                    margin:0px;
+                    padding:0px;
+                }
+
+                li{
+                    list-style: none;
+
+                }
+                li::before{
+                    display:inline-flex;
+                    content: " ";
+                    width:1rem;
+                    height:1em;
+                    background-image: url("list-item.jpeg");
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+            </style>
+        </head>
+<body>
+<div class="exp">
+
+    <ul class="nav">
+        <li>Erstes Element</li>
+        <li>Zweites Element</li>
+        <li>Drittes Element</li>
+        <li>Viertes Element</li>
+        <li>Fünftes Element</li>
+        <li>Sechstes Element</li>
+    </ul>
+
+
+</div>
+
+</body>
+</html>
